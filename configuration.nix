@@ -185,6 +185,7 @@
       "plugdev"
       "openrazer"
       "input"
+      "gamemode"
     ];
     useDefaultShell = true;
     packages = with pkgs; [
@@ -203,6 +204,10 @@
       extraPackages = with pkgs; [hidapi];
       extest.enable = true;
     };
+
+    gamescope.enable = true;
+
+    gamemode.enable = true;
 
     coolercontrol.enable = true;
 

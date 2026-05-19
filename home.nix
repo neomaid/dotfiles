@@ -48,8 +48,6 @@
     pavucontrol
 
     # games
-    gamemode
-    gamescope
     mangohud
     xivlauncher
     prismlauncher
