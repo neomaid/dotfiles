@@ -53,6 +53,7 @@
     "nct6775"
 
     "uinput"
+    "joydev"
     "ntsync"
   ];
 
