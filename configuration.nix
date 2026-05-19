@@ -99,6 +99,9 @@
     users = ["alex?"];
   };
 
+  # udev rules for Steam controller
+  hardware.steam-hardware.enable = true;
+
   networking.hostName = "tone"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
@@ -195,7 +198,11 @@
 
     firefox.enable = true;
 
-    steam.enable = true;
+    steam = {
+      enable = true;
+      extraPackages = with pkgs; [hidapi];
+      extest.enable = true;
+    };
 
     coolercontrol.enable = true;
 
