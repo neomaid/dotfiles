@@ -5,7 +5,8 @@
   config,
   pkgs,
   ...
-}: {
+}:
+{
   imports = [
     # Include the results of the hardware scan.
     ./hardware-configuration.nix
@@ -21,7 +22,7 @@
 
   environment = {
     # Autocompletion for system packages, see https://home-manager-options.extranix.com/?query=zsh.enablecompletion&release=master
-    pathsToLink = ["/share/zsh"];
+    pathsToLink = [ "/share/zsh" ];
 
     etc = {
       # lm_sensors config
@@ -63,7 +64,7 @@
   };
 
   # Load nvidia driver for Xorg and Wayland
-  services.xserver.videoDrivers = ["nvidia"];
+  services.xserver.videoDrivers = [ "nvidia" ];
 
   hardware.nvidia = {
     # Modesetting is required.
@@ -97,7 +98,7 @@
 
   hardware.openrazer = {
     enable = true;
-    users = ["alex?"];
+    users = [ "alex?" ];
   };
 
   # udev rules for Steam controller
@@ -202,7 +203,7 @@
 
     steam = {
       enable = true;
-      extraPackages = with pkgs; [hidapi];
+      extraPackages = with pkgs; [ hidapi ];
       extest.enable = true;
     };
 
@@ -217,7 +218,7 @@
       enable = true;
       # Certain features, including CLI integration and system authentication support,
       # require enabling PolKit integration on some desktop environments (e.g. Plasma).
-      polkitPolicyOwners = ["alex"];
+      polkitPolicyOwners = [ "alex" ];
     };
   };
 

@@ -82,7 +82,7 @@
       size = 10000;
       ignoreAllDups = true;
       path = "$HOME/.zsh_history";
-      ignorePatterns = ["rm *"];
+      ignorePatterns = [ "rm *" ];
     };
 
     shellAliases = {
@@ -237,7 +237,6 @@
         aaron-bond.better-comments
         ms-python.python
         jnoortheen.nix-ide
-        kamadorueda.alejandra
         tamasfe.even-better-toml
         codezombiech.gitignore
         mvllow.rose-pine
