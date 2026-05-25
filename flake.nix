@@ -47,6 +47,7 @@
             ./hosts/tone/tone.nix
             ./modules/nixos/nvidia.nix
             ./modules/nixos/razer.nix
+            ./modules/nixos/kde-plasma.nix
 
             home-manager.nixosModules.home-manager
             {
