@@ -45,6 +45,7 @@
 
           modules = [
             ./hosts/tone/tone.nix
+            ./modules/nixos/razer.nix
 
             home-manager.nixosModules.home-manager
             {

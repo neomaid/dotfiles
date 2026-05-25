@@ -53,9 +53,7 @@
     "jc24"
     "nct6775"
 
-    "uinput"
-    "joydev"
-    "ntsync"
+    "ntsync" # Endfield
   ];
 
   # Enable OpenGL
@@ -94,11 +92,6 @@
 
     # Optionally, you may need to select the appropriate driver version for your specific GPU.
     package = config.boot.kernelPackages.nvidiaPackages.stable;
-  };
-
-  hardware.openrazer = {
-    enable = true;
-    users = [ "alex?" ];
   };
 
   # udev rules for Steam controller
@@ -185,7 +178,6 @@
       "networkmanager"
       "wheel"
       "plugdev"
-      "openrazer"
       "input"
       "gamemode"
     ];
@@ -230,7 +222,6 @@
   environment.systemPackages = with pkgs; [
     #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
     #  wget
-    openrazer-daemon
     lm_sensors
     input-remapper # TODO add input-remapper configuration to system config
   ];
@@ -262,9 +253,6 @@
       # User access for Pulsar X2 Crazylight mouse (through 8K Dongle) (VID 3710, PID 5406)
       SUBSYSTEM=="usb", ENV{DEVTYPE}=="usb_device", ATTRS{idVendor}=="3710", ATTRS{idProduct}=="5406", MODE="0660", GROUP="input", TAG+="uaccess"
       KERNEL=="hidraw", ATTRS{idVendor}=="3710", ATTRS{idProduct}=="5406", MODE="0660", GROUP="input" TAG+="uaccess"
-
-      # Create persistent uinput device for Razer Tartarus Pro joystick
-      KERNEL=="uinput", MODE="0660", GROUP="input", OPTIONS+="static_node=uinput"
     '';
   };
 
