@@ -106,7 +106,7 @@
     enable = true;
 
     enableZshIntegration = true;
-    settings = lib.importTOML ./config/starship-config.toml;
+    settings = lib.importTOML ./../config/starship-config.toml;
   };
 
   # TODO configure default values
