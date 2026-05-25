@@ -44,7 +44,7 @@
           specialArgs = { inherit inputs; };
 
           modules = [
-            ./hosts/tone/tone.nix
+            ./hosts/tone
             ./modules/nixos/nvidia.nix
             ./modules/nixos/razer.nix
             ./modules/nixos/kde-plasma.nix
