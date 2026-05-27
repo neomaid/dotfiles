@@ -5,9 +5,9 @@
 }:
 
 {
-  # imports = [
-  #   ../../home/shared
-  # ];
+  imports = [
+    ../../home/shared
+  ];
 
   # Home Manager needs a bit of information about you and the
   # paths it should manage.

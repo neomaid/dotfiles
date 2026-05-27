@@ -54,7 +54,6 @@
     pkgs.dockutil
     pkgs.nix-output-monitor
 
-    pkgs.ghostty-bin
     pkgs._1password-gui
     pkgs._1password-cli
     pkgs.obsidian

@@ -4,8 +4,12 @@
   ...
 }:
 
+let
+  inherit (pkgs) stdenv;
+in
 {
   programs = {
+    # TODO configure zsh
     zsh = {
       enable = true;
 
@@ -43,25 +47,32 @@
       settings = lib.importTOML ./../../config/starship-config.toml;
     };
 
+    # TODO switch to kitty
     kitty = {
       enable = true;
     };
 
     ghostty = {
       enable = true;
+      # Use ghostty-bin on darwin since ghostty is not available
+      package = lib.mkIf stdenv.isDarwin pkgs.ghostty-bin;
 
-      systemd.enable = true;
+      # Enable systemd user service on Linux
+      systemd.enable = lib.mkIf stdenv.isLinux true;
       enableZshIntegration = true;
       settings = {
         window-width = 120;
         window-height = 35;
         window-padding-color = "background";
 
-        font-family = "0xProto Nerd Font Mono";
+        font-family = "Google Sans Code";
         font-size = 12;
         font-feature = "-liga, -calt";
 
-        theme = "Rose Pine Moon";
+        theme = "vesper";
+
+        # Disable mouse capture with shift (enable clickable hyperlinks in e.g. tmux with shift+cmd)
+        mouse-shift-capture = "never";
       };
     };
   };
