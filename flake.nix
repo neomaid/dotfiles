@@ -60,7 +60,7 @@
           specialArgs = { inherit inputs; };
 
           modules = [
-            ./hosts/tone
+            ./hosts/tone/configuration.nix
             ./modules/nixos/nvidia.nix
             ./modules/nixos/razer.nix
             ./modules/nixos/kde-plasma.nix
@@ -72,7 +72,7 @@
                 useUserPackages = true;
                 extraSpecialArgs = { inherit inputs; };
                 backupFileExtension = "home-manager-backup";
-                users.alex = import ./home/nixos/home.nix;
+                users.alex = import ./hosts/tone/home.nix;
               };
             }
 
@@ -96,7 +96,7 @@
           specialArgs = { inherit inputs; };
 
           modules = [
-            ./hosts/northstar
+            ./hosts/northstar/configuration.nix
 
             nix-homebrew.darwinModules.nix-homebrew
             {
@@ -115,7 +115,7 @@
                 useUserPackages = true;
                 extraSpecialArgs = { inherit inputs; };
                 backupFileExtension = "home-manager-backup";
-                users.alex = import ./home/darwin/home.nix;
+                users.alex = import ./hosts/northstar/home.nix;
               };
             }
 

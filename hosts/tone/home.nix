@@ -6,7 +6,7 @@
 # TODO add systemd service for tartarus-pro-joystick-util
 {
   imports = [
-    ../shared
+    ../../home/shared
   ];
 
   # Home Manager needs a bit of information about you and the
