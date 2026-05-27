@@ -66,8 +66,8 @@ in
         window-padding-color = "background";
 
         font-family = "Google Sans Code";
-        font-size = 12;
-        font-feature = "-liga, -calt";
+        font-size = if stdenv.isDarwin then 14 else 12;
+        font-feature = "-liga, -calt, -dlig";
 
         theme = "Vesper";
 
