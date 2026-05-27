@@ -19,6 +19,10 @@ in
   # changes in each release.
   home.stateVersion = "25.05";
 
+  home.sessionVariables = {
+    EDITOR = "nano";
+  };
+
   programs = {
     # Let Home Manager install and manage itself.
     home-manager.enable = true;

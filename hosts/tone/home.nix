@@ -59,10 +59,6 @@
     protonplus
   ];
 
-  home.sessionVariables = {
-    EDITOR = "nano";
-  };
-
   # TODO configure default values
   programs.ssh = {
     enable = true;
