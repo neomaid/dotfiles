@@ -44,7 +44,7 @@ in
       enable = true;
 
       enableZshIntegration = true;
-      settings = lib.importTOML ./../../config/starship-config.toml;
+      settings = lib.importTOML ./../../config/starship/starship-config.toml;
     };
 
     # TODO switch to kitty
