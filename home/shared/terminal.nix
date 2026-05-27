@@ -69,7 +69,7 @@ in
         font-size = 12;
         font-feature = "-liga, -calt";
 
-        theme = "vesper";
+        theme = "Vesper";
 
         # Disable mouse capture with shift (enable clickable hyperlinks in e.g. tmux with shift+cmd)
         mouse-shift-capture = "never";
