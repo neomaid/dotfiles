@@ -1,5 +1,8 @@
 { pkgs, ... }:
 
+let
+  inherit (pkgs) stdenv;
+in
 {
   imports = [
     ./terminal.nix
