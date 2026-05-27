@@ -122,12 +122,6 @@
     # };
   };
 
-  fonts.packages = with pkgs; [
-    _0xproto
-    nerd-fonts._0xproto
-    googlesans-code
-  ];
-
   # Enable alternative shell support in nix-darwin.
   programs.zsh.enable = true;
 }

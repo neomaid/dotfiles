@@ -6,6 +6,10 @@
 
 # Base configuration for all macOS/darwin hosts
 {
+  imports = [
+    ../shared/fonts.nix
+  ];
+
   # Used for backwards compatibility, please read the changelog before changing.
   # $ darwin-rebuild changelog
   system.stateVersion = 6;

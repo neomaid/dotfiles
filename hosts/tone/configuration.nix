@@ -10,6 +10,7 @@
   imports = [
     # Include the results of the hardware scan.
     ./hardware-configuration.nix
+    ../../modules/shared/fonts.nix
   ];
 
   # TODO configure bootloader
@@ -174,16 +175,6 @@
     #  wget
     lm_sensors
     input-remapper # TODO add input-remapper configuration to system config
-  ];
-
-  fonts.packages = with pkgs; [
-    noto-fonts
-    noto-fonts-cjk-sans
-    noto-fonts-cjk-serif
-    noto-fonts-monochrome-emoji
-    noto-fonts-color-emoji
-    _0xproto
-    nerd-fonts._0xproto
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
