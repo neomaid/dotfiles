@@ -1,4 +1,8 @@
 { pkgs, ... }:
+
+let
+  inherit (pkgs) stdenv;
+in
 {
   programs = {
     vscode = {
@@ -9,6 +13,7 @@
           "workbench.colorTheme" = "Rosé Pine Moon (no italics)";
           "workbench.iconTheme" = "material-icon-theme";
           "editor.fontFamily" = "0xProto Nerd Font";
+          "terminal.integrated.fontFamily" = "Monaco";
           "editor.formatOnSave" = true;
           "editor.minimap.enabled" = false;
           "chat.disableAIFeatures" = true;
@@ -17,12 +22,12 @@
 
         keybindings = [
           {
-            "key" = "ctrl+[Backslash]";
+            "key" = if stdenv.isDarwin then "cmd+[Backslash]" else "ctrl+[Backslash]";
             "command" = "editor.action.commentLine";
             "when" = "editorTextFocus && !editorReadonly";
           }
           {
-            "key" = "shift+ctrl+7";
+            "key" = if stdenv.isDarwin then "shift+cmd+7" else "shift+ctrl+7";
             "command" = "-editor.action.commentLine";
             "when" = "editorTextFocus && !editorReadonly";
           }

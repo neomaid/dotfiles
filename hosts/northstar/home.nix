@@ -41,51 +41,6 @@
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
 
-  programs.vscode = {
-    enable = true;
-
-    profiles.default = {
-      userSettings = {
-        "workbench.colorTheme" = "Rosé Pine Moon (no italics)";
-        "workbench.iconTheme" = "material-icon-theme";
-        "editor.fontFamily" = "0xProto Nerd Font";
-        "terminal.integrated.fontFamily" = "Monaco";
-        "editor.formatOnSave" = true;
-        "editor.minimap.enabled" = false;
-        "chat.disableAIFeatures" = true;
-        "terminal.integrated.initialHint" = false;
-      };
-
-      keybindings = [
-        {
-          "key" = "cmd+[Backslash]";
-          "command" = "editor.action.commentLine";
-          "when" = "editorTextFocus && !editorReadonly";
-        }
-        {
-          "key" = "shift+cmd+7";
-          "command" = "-editor.action.commentLine";
-          "when" = "editorTextFocus && !editorReadonly";
-        }
-      ];
-
-      extensions = with pkgs.vscode-marketplace; [
-        jnoortheen.nix-ide
-
-        redhat.java
-        vscjava.vscode-java-debug
-        vscjava.vscode-java-test
-        vscjava.vscode-java-dependency
-
-        codezombiech.gitignore
-
-        mvllow.rose-pine
-        esbenp.prettier-vscode
-        pkief.material-icon-theme
-      ];
-    };
-  };
-
   # broken
   # programs.anki = {
   #   enable = true;
