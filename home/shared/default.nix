@@ -7,6 +7,7 @@ in
   imports = [
     ./terminal.nix
     ./editor.nix
+    ./desktop.nix
   ];
 
   # This value determines the Home Manager release that your
