@@ -19,6 +19,9 @@
     # nix-homebrew for managing homebrew installations on macOS
     nix-homebrew.url = "github:zhaofengli/nix-homebrew";
 
+    # mac-app-util for Nix apps on macOS
+    mac-app-util.url = "github:hraban/mac-app-util";
+
     # nixpkgs overlay for VSCode extensions
     nix-vscode-extensions.url = "github:nix-community/nix-vscode-extensions";
   };
@@ -30,6 +33,7 @@
       home-manager,
       nix-darwin,
       nix-homebrew,
+      mac-app-util,
       nix-vscode-extensions,
       ...
     }@inputs:
@@ -116,8 +120,13 @@
                 extraSpecialArgs = { inherit inputs; };
                 backupFileExtension = "home-manager-backup";
                 users.alex = import ./hosts/northstar/home.nix;
+                sharedModules = [
+                  mac-app-util.homeManagerModules.default
+                ];
               };
             }
+
+            mac-app-util.darwinModules.default
 
             configRevision
           ];

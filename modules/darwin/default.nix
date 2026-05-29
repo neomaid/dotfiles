@@ -30,18 +30,17 @@
     dock = {
       autohide = true;
       autohide-delay = 0.0;
-      # persistent-apps = [
-      #   "/System/Applications/System Settings.app"
-      #   "/System/Cryptexes/App/System/Applications/Safari.app"
-      #   "/Applications/Firefox.app"
-      #   "/Applications/Helium.app"
-      #   "${pkgs.obsidian}/Applications/Obsidian.app"
-      #   # "${pkgs.discord}/Applications/Discord.app"
-      #   "/Applications/Discord.app"
-      #   "/System/Applications/Music.app"
-      #   "${pkgs.vscode}/Applications/Visual Studio Code.app"
-      #   "${pkgs.ghostty-bin}/Applications/Ghostty.app"
-      # ];
+      persistent-apps = [
+        "/System/Applications/System Settings.app"
+        "/System/Cryptexes/App/System/Applications/Safari.app"
+        "/Applications/Firefox.app"
+        "/Applications/Helium.app"
+        "${pkgs.obsidian}/Applications/Obsidian.app"
+        "${pkgs.vesktop}/Applications/Vesktop.app"
+        "/System/Applications/Music.app"
+        "${pkgs.vscode}/Applications/Visual Studio Code.app"
+        "${pkgs.ghostty-bin}/Applications/Ghostty.app"
+      ];
     };
   };
 
