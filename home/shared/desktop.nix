@@ -18,6 +18,7 @@ in
         hardwareAcceleration = true;
         tray = true;
         minimizeToTray = true;
+        arRPC = true;
         customTitleBar = mkIf stdenv.isLinux true;
       };
 
