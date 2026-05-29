@@ -18,7 +18,7 @@ in
         hardwareAcceleration = true;
         tray = true;
         minimizeToTray = true;
-        customTitleBar = mkIf stdenv.isLinux false;
+        customTitleBar = mkIf stdenv.isLinux true;
       };
 
       vencord.settings = {
