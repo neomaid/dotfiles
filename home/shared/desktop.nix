@@ -23,7 +23,7 @@ in
       };
 
       vencord.settings = {
-        autoUpdate = false;
+        autoUpdate = true;
         useQuickCss = false;
 
         plugins = {
