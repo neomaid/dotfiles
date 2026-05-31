@@ -42,7 +42,6 @@
 
     # desktop apps
     ungoogled-chromium
-    polychromatic
     discord
     signal-desktop
     cider-2
