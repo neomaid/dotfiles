@@ -39,6 +39,7 @@ in
           vscjava.vscode-java-debug
           vscjava.vscode-java-test
           vscjava.vscode-java-dependency
+          vscjava.vscode-maven
           ms-python.python
           jnoortheen.nix-ide
           tamasfe.even-better-toml
